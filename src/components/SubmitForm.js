@@ -16,7 +16,7 @@ const SubmitForm = () => {
   const rangeRef = useRef("");
   const digitRef = useRef("");
 
-  // I added this as a handler to onclick to the button, but we setIsLoading to true in the submitHandler, so it was not necessary
+  // I added this as a handler to onClick to the button, but we setIsLoading to true in the submitHandler, so it was not necessary
   // const isLoadingHandler = () => {
   //   setIsLoading(true);
   // };
@@ -100,6 +100,7 @@ const SubmitForm = () => {
                 Name must be 3-15 characters
               </p>
             </div>
+
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
                 htmlFor="email"
@@ -123,6 +124,7 @@ const SubmitForm = () => {
               </p>
             </div>
           </div>
+
           <div>
             <div className="mb-6">
               <label
@@ -147,8 +149,6 @@ const SubmitForm = () => {
                 Atleast one number, one uppercase and lowercase. 8+ characters.
               </p>
             </div>
-            {/* <label htmlFor="color">Please pick a color</label>
-        <input type="color" id="color" required></input> */}
 
             <div>
               <label
@@ -199,6 +199,7 @@ const SubmitForm = () => {
                 Between 0-9
               </p>
             </div>
+
             <div>
               <label
                 htmlFor="text"
@@ -221,7 +222,6 @@ const SubmitForm = () => {
                 You should enter a message 10-100 characters.
               </p>
             </div>
-            {/* input dropdown from list */}
 
             <div class="flex items-center my-5">
               <input
@@ -243,19 +243,6 @@ const SubmitForm = () => {
               </p>
             </div>
 
-            {/* <label
-              htmlFor="checkbox"
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold"
-            >
-              You need to select this to proceed
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="checkbox"
-              id="checkbox"
-              required
-              ref={radioRef}
-            ></input> */}
             <div className="flex items-center justify-start">
               <button
                 // onClick={isLoadingHandler}
@@ -267,6 +254,7 @@ const SubmitForm = () => {
               </button>
               {isLoading && <LoadingSpinner />}
             </div>
+
             <p className="my-5 text-gray-700 text-m font-semibold">
               When you click the button successfully, the data will be posted in
               JSON format with a link below.
