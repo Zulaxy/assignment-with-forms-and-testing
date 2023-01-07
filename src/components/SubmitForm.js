@@ -268,12 +268,10 @@ const SubmitForm = () => {
               {isLoading && <LoadingSpinner />}
             </div>
             <p className="my-5 text-gray-700 text-m font-semibold">
-              Upon Clickling the Submit button, the data will be posted in JSON
-              format.
+              When you click the button successfully, the data will be posted in
+              JSON format with a link below.
             </p>
-            {formSent && (
-              <FormSubmitted  />
-            )}
+            {formSent && <FormSubmitted />}
             {isLoading && "Sending your data"}
           </div>
         </form>
