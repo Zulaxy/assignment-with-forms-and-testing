@@ -9,6 +9,7 @@ const FormSubmitted = () => {
       <p className="text-m text-green-900">Thank you for sending the data!</p>
       <a
         target="_blank"
+        rel="noreferrer"
         className="bg-sky-700 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded ml-5 active:scale-90 transition duration-150"
         href="https://assignment-16792-default-rtdb.europe-west1.firebasedatabase.app/submits.json"
       >
