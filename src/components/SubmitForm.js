@@ -155,7 +155,7 @@ const SubmitForm = () => {
                 htmlFor="volume"
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               >
-                How are you feeling today from 1-5?
+                How are you feeling today from 1-10?
               </label>
               <input
                 data-testid="range_input_test"

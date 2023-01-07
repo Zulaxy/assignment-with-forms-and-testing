@@ -9,6 +9,8 @@ test("renders the form", () => {
   expect(formItem).toBeInTheDocument();
 });
 
+// test if email contains @
+
 test("if input name has the correct attribute and is present", () => {
   render(<SubmitForm />);
 
@@ -62,11 +64,3 @@ test("if all forms are valid, and we click submit, we get the success message", 
   const finalRes = await screen.findByTestId("form_submitted_input_test");
   expect(finalRes).toBeInTheDocument();
 });
-
-// show error if password is empty
-
-// showing the correct value of the slider
-
-// show error if the text area is empty
-
-// Check if link for data is there if form is submitted
