@@ -13,4 +13,4 @@ During the request, you should get a loading spinner and when the data is posted
 
 There are a couple of unit tests, one of which will intentionally fail, but the reason behind it is explained in SubmitForm.test.js as a comment.
 
---------------------
+---
