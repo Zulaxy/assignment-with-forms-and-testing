@@ -88,7 +88,7 @@ const SubmitForm = () => {
                 required
                 minLength="3"
                 maxLength="15"
-                placeholder="Name"
+                placeholder="Please enter your name"
                 ref={nameRef}
               ></input>
               <p
@@ -129,7 +129,7 @@ const SubmitForm = () => {
                 htmlFor="password"
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
               >
-                Enter Some Password
+                Enter a Password
               </label>
               <input
                 data-testid="password_input_test"
@@ -194,7 +194,7 @@ const SubmitForm = () => {
                 max="9"
                 ref={digitRef}
                 required
-                placeholder="pick a number"
+                placeholder="Please pick a digit"
               ></input>
               <p className="invisible peer-invalid:visible text-red-700 font-light">
                 Between 0-9
@@ -217,7 +217,7 @@ const SubmitForm = () => {
                 minLength="10"
                 maxLength="100"
                 rows="8"
-                placeholder="Your Text Goes Here"
+                placeholder="Please input your message"
               ></textarea>
               <p className="invisible peer-invalid:visible text-red-700 font-light">
                 You should enter a message 10-100 characters.
@@ -237,7 +237,7 @@ const SubmitForm = () => {
                 htmlFor="bordered-checkbox-1"
                 className="w-full py-4 ml-2 text-sm font-medium text-gray-900"
               >
-                You Need to check this box to proceed
+                You MUST check this box to proceed
               </label>
               <p className="invisible peer-invalid:visible text-red-700 font-light">
                 You should enter a message 10-100 characters.
