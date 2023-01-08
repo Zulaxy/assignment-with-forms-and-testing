@@ -1,4 +1,4 @@
-This project was built on React and tailwindcss
+This project was built on React, TailwindCSS and Firebase.
 
 To start it, download the code, cd into the folder and npm install the dependencies.
 
@@ -13,6 +13,6 @@ During the request, you should get a loading spinner and when the data is posted
 
 There are a couple of unit tests, one of which will intentionally fail, but the reason behind it is explained in SubmitForm.test.js as a comment.
 
-To run the tests, cd in the folder and npm test
+To run the tests, cd in the folder and npm test.
 
 ---
