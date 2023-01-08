@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import SubmitForm from "./SubmitForm";
 
@@ -31,7 +31,23 @@ test("check if we insert valid name, the error message is not visible", () => {
   // there was a discussion in github https://github.com/testing-library/jest-dom/issues/209 but i am including the comment as it was interesting
 });
 
+test("checks if the value selected in the range field is displayed correctly below the field", () => {
+  render(<SubmitForm />);
+
+  const rangeEl = screen.getByTestId("range_input_test");
+  fireEvent.change(rangeEl, { target: { value: 3 } });
+
+  const rangeRes = screen.getByTestId("range_result_test_id");
+  expect(rangeRes).toHaveTextContent("3");
+});
+
 test("if all forms are valid, and we click submit, we get the success message", async () => {
+  // this test was sending real requests to Firebase, so I made fetch to be a mock function with jest
+  window.fetch = jest.fn();
+  window.fetch.mockResolvedValueOnce({
+    json: async () => [],
+  });
+
   render(<SubmitForm />);
 
   const nameEl = screen.getByTestId("name_input_test");

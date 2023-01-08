@@ -4,7 +4,7 @@ import LoadingSpinner from "./LoadingSpinner";
 import FormSubmitted from "./FormSubmitted";
 
 const SubmitForm = () => {
-  const [range, setRange] = useState(5);
+  const [range, setRange] = useState(10);
   const [formSent, setFormSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -50,8 +50,6 @@ const SubmitForm = () => {
       setIsLoading(false);
       e.target.reset();
     });
-    const data = await response.json();
-    console.log(data);
   };
 
   const changeRange = (event) => {
@@ -95,7 +93,7 @@ const SubmitForm = () => {
               ></input>
               <p
                 data-testid="name_validation_test"
-                class="invisible peer-invalid:visible text-red-700 font-light"
+                className="invisible peer-invalid:visible text-red-700 font-light"
               >
                 Name must be 3-15 characters
               </p>
@@ -119,7 +117,7 @@ const SubmitForm = () => {
                 placeholder="Please enter an email"
                 ref={emailRef}
               ></input>
-              <p class="invisible peer-invalid:visible text-red-700 font-light">
+              <p className="invisible peer-invalid:visible text-red-700 font-light">
                 Must be a valid mail
               </p>
             </div>
@@ -145,7 +143,7 @@ const SubmitForm = () => {
                 placeholder="Please entern a password"
                 ref={passRef}
               ></input>
-              <p class="invisible peer-invalid:visible text-red-700 font-light">
+              <p className="invisible peer-invalid:visible text-red-700 font-light">
                 Atleast one number, one uppercase and lowercase. 8+ characters.
               </p>
             </div>
@@ -170,8 +168,11 @@ const SubmitForm = () => {
                 required
                 onChange={changeRange}
               />
-              <h4>{`I am Feeling like... ${range}`}</h4>
-              <p class="invisible peer-invalid:visible text-red-700 font-light">
+              <h4>
+                {`I am Feeling like... `}
+                <span data-testid="range_result_test_id">{range}</span>
+              </h4>
+              <p className="invisible peer-invalid:visible text-red-700 font-light">
                 Between 1-10
               </p>
             </div>
@@ -195,7 +196,7 @@ const SubmitForm = () => {
                 required
                 placeholder="pick a number"
               ></input>
-              <p class="invisible peer-invalid:visible text-red-700 font-light">
+              <p className="invisible peer-invalid:visible text-red-700 font-light">
                 Between 0-9
               </p>
             </div>
@@ -218,27 +219,27 @@ const SubmitForm = () => {
                 rows="8"
                 placeholder="Your Text Goes Here"
               ></textarea>
-              <p class="invisible peer-invalid:visible text-red-700 font-light">
+              <p className="invisible peer-invalid:visible text-red-700 font-light">
                 You should enter a message 10-100 characters.
               </p>
             </div>
 
-            <div class="flex items-center my-5">
+            <div className="flex items-center my-5">
               <input
                 data-testid="checkbox_input_test"
                 id="bordered-checkbox-1"
                 type="checkbox"
                 name="bordered-checkbox"
                 required
-                class="peerw-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                className="peerw-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
               />
               <label
-                for="bordered-checkbox-1"
-                class="w-full py-4 ml-2 text-sm font-medium text-gray-900"
+                htmlFor="bordered-checkbox-1"
+                className="w-full py-4 ml-2 text-sm font-medium text-gray-900"
               >
                 You Need to check this box to proceed
               </label>
-              <p class="invisible peer-invalid:visible text-red-700 font-light">
+              <p className="invisible peer-invalid:visible text-red-700 font-light">
                 You should enter a message 10-100 characters.
               </p>
             </div>
